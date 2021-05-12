@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jaSZ4hqEiwLq2EwzFirxjFJzw19gWrND6ozd25jmYJpQ+QBPhQNqxbE3gz6lkrYeuo7ek02l9wFJHjVAkvDNlQ==",
+  "success": true,
+  "projectFilePath": "/home/huginn_muninn/Source/Mimir/Mimir.Elm.Core/test/Mimir.Elm.Core.Test.fsproj",
+  "expectedPackageFiles": [
+    "/home/huginn_muninn/.nuget/packages/expecto/9.0.2/expecto.9.0.2.nupkg.sha512",
+    "/home/huginn_muninn/.nuget/packages/fsharp.core/5.0.0/fsharp.core.5.0.0.nupkg.sha512",
+    "/home/huginn_muninn/.nuget/packages/mono.cecil/0.11.2/mono.cecil.0.11.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Mimir.Elm.Core</name></assembly>
+<members>
+<member name="T:Elm.Core.Basics.Never">
+<summary>
+ A value that can never happen!
+</summary>
+</member>
+<member name="T:Elm.Core.Basics.Order">
+<summary>
+ Represents the relative ordering of two things.
+ The relations are less than, equal to, and greater than.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.never``1(Elm.Core.Basics.Never)">
+<summary>
+ So the `never` function is basically telling the type system, make sure no one
+ ever calls me!
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.always``2(``0,``1)">
+<summary>
+ Create a function that *always* returns the same value.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.identity``1(``0)">
+<summary>
+ Given a value, returns exactly the same value. This is called
+ [the identity function](https://en.wikipedia.org/wiki/Identity_function).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.isInfinite(System.Double)">
+<summary>
+ Determine whether a float is positive or negative infinity.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.isNaN(System.Double)">
+<summary>
+ Determine whether a float is an undefined or unrepresentable number.
+ NaN stands for *not a number* and it is [a standardized part of floating point
+ numbers](https://en.wikipedia.org/wiki/NaN).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.toPolar(System.Double,System.Double)">
+<summary>
+ Convert Cartesian coordinates (x,y) to polar coordinates (r,&amp;theta;).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.fromPolar(System.Double,System.Double)">
+<summary>
+ Convert polar coordinates (r,&amp;theta;) to Cartesian coordinates (x,y).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.turns(System.Double)">
+<summary>
+ Convert turns to standard Elm angles (radians). One turn is equal to 360°.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.degrees(System.Double)">
+<summary>
+ Convert degrees to standard Elm angles (radians).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.radians``1(``0)">
+<summary>
+ Convert radians to standard Elm angles (radians).
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.atan2(System.Double,System.Double)">
+<summary>
+ This helps you find the angle (in radians) to an `(x,y)` coordinate.
+ So rather than saying `atan (y/x)` you say `atan2 y x` and you can get a full
+ range of angles.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.atan(System.Double)">
+<summary>
+ This helps you find the angle (in radians) to an `(x,y)` coordinate, but
+ in a way that is rarely useful in programming. **You probably want
+ [`atan2`](#atan2) instead!**
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.asin(System.Double)">
+<summary>
+ Figure out the arcsine for `opposite / hypotenuse` in radians.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.acos(System.Double)">
+<summary>
+ Figure out the arccosine for `adjacent / hypotenuse` in radians.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.tan(System.Double)">
+<summary>
+ Figure out the tangent given an angle in radians.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.sin(System.Double)">
+<summary>
+ Figure out the sine given an angle in radians.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.cos(System.Double)">
+<summary>
+ Figure out the cosine given an angle in radians.
+</summary>
+</member>
+<member name="P:Elm.Core.Basics.pi">
+<summary>
+ An approximation of pi.
+</summary>
+</member>
+<member name="P:Elm.Core.Basics.e">
+<summary>
+ An approximation of e.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.logBase(System.Double,System.Double)">
+<summary>
+ Calculate the logarithm of a number with a given base.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.sqrt``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0)">
+<summary>
+ Take the square root of a number.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.clamp``1(``0,``0,``0)">
+<summary>
+ Clamps a number within a given range.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.abs``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0)">
+<summary>
+ Get the [absolute value][abs] of a number.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.negate``1(Microsoft.FSharp.Core.FSharpFunc{``0,``0},``0)">
+<summary>
+ Negate a number.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.remainderBy(System.Int32,System.Int32)">
+<summary>
+ Get the remainder after division.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.modBy(System.Int32,System.Int32)">
+<summary>
+ Perform [modular arithmetic](https://en.wikipedia.org/wiki/Modular_arithmetic).
+ A common trick is to use (n mod 2) to detect even and odd numbers.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.xor(System.Boolean,System.Boolean)">
+<summary>
+ The exclusive-or operator.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.compare``1(``0,``0)">
+<summary>
+ Compare any two comparable values.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.truncate(System.Double)">
+<summary>
+ Truncate a number, rounding towards zero.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.ceiling(System.Double)">
+<summary>
+ Ceiling function, rounding up.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.floor(System.Double)">
+<summary>
+ Floor function, rounding down.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.round(System.Double)">
+<summary>
+ Round a number to the nearest integer.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.toFloat(System.Int32)">
+<summary>
+ Convert an integer into a float.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.op_Concatenate(System.Double,System.Double)">
+<summary>
+ Exponentiation
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.op_PlusPlus``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0,``0)">
+<summary>
+ Put two appendable things together. This includes strings and lists.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.op_DivisionAssignment``1(``0,``0)">
+<summary>
+ Check if values are not the same.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.op_EqualsEquals``1(``0,``0)">
+<summary>
+ Check if values are the same.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.idiv(System.Int32,System.Int32)">
+<summary>
+ Integer division.
+ Notice that the remainder is discarded.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.fdiv(System.Double,System.Double)">
+<summary>
+ Floating-point division.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.mul(System.Double,System.Double)">
+<summary>
+ Multiply numbers like `2 * 3 == 6`.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.sub(System.Int32,System.Int32)">
+<summary>
+ Subtract numbers like `4 - 3 == 1`.
+</summary>
+</member>
+<member name="M:Elm.Core.Basics.add(System.Double,System.Double)">
+<summary>
+ Add two numbers.
+</summary>
+</member>
+<member name="M:Elm.Core.Maybe.andThen``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Chain together many computations that may fail. It is helpful to see its
+ definition:
+ &lt;para&gt;andThen : (a -&gt; Maybe b) -&gt; Maybe a -&gt; Maybe b&lt;/para&gt;
+ &lt;para&gt;andThen callback maybe =&lt;/para&gt;
+ &lt;para&gt;    case maybe of&lt;/para&gt;
+ &lt;para&gt;        Just value -&gt;&lt;/para&gt;
+ &lt;para&gt;            callback value&lt;/para&gt;
+ &lt;para&gt;        Nothing -&gt;&lt;/para&gt;
+ &lt;para&gt;            Nothing&lt;/para&gt;
+ This means we only continue with the callback if things are going well. For
+ example, say you need to parse some user input as a month:
+ &lt;para&gt;parseMonth : String -&gt; Maybe Int&lt;/para&gt;
+ &lt;para&gt;parseMonth userInput =&lt;/para&gt;
+ &lt;para&gt;    String.toInt userInput&lt;/para&gt;
+ &lt;para&gt;    |&gt; andThen toValidMonth&lt;/para&gt;
+ &lt;para&gt;toValidMonth : Int -&gt; Maybe Int&lt;/para&gt;
+ &lt;para&gt;toValidMonth month =&lt;/para&gt;
+ &lt;para&gt;    if 1 &lt;= month &amp;&amp; month &lt;= 12 then&lt;/para&gt;
+ &lt;para&gt;        Just month&lt;/para&gt;
+ &lt;para&gt;    else&lt;/para&gt;
+ &lt;para&gt;        Nothing&lt;/para&gt;
+ In the `parseMonth` function, if `String.toInt` produces `Nothing` (because
+ the `userInput` was not an integer) this entire chain of operations will
+ short-circuit and result in `Nothing`. If `toValidMonth` results in `Nothing`,
+ again the chain of computations will result in `Nothing`.
+</summary>
+</member>
+<member name="M:Elm.Core.Maybe.map2``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{``1})">
+<summary>
+ Apply a function if all the arguments are `Just` a value.
+ &lt;para&gt;map2 (+) (Just 3) (Just 4) == Just 7&lt;/para&gt;
+ &lt;para&gt;map2 (+) (Just 3) Nothing == Nothing&lt;/para&gt;
+ &lt;para&gt;map2 (+) Nothing (Just 4) == Nothing&lt;/para&gt;
+ &lt;para&gt;map2 (+) (String.toInt &quot;1&quot;) (String.toInt &quot;123&quot;) == Just 124&lt;/para&gt;
+ &lt;para&gt;map2 (+) (String.toInt &quot;x&quot;) (String.toInt &quot;123&quot;) == Nothing&lt;/para&gt;
+ &lt;para&gt;map2 (+) (String.toInt &quot;1&quot;) (String.toInt &quot;1.3&quot;) == Nothing&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.Maybe.map``2(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Transform a `Maybe` value with a given function:
+ &lt;para&gt;map sqrt (Just 9) == Just 3&lt;/para&gt;
+ &lt;para&gt;map sqrt Nothing  == Nothing&lt;/para&gt;
+ &lt;para&gt;map sqrt (String.toFloat &quot;9&quot;) == Just 3&lt;/para&gt;
+ &lt;para&gt;map sqrt (String.toFloat &quot;x&quot;) == Nothing&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.Maybe.withDefault``1(``0,Microsoft.FSharp.Core.FSharpOption{``0})">
+<summary>
+ Provide a default value, turning an optional value into a normal
+ value.  This comes in handy when paired with functions like
+ [`Dict.get`](Dict#get) which gives back a `Maybe`.
+ &lt;para&gt;withDefault 100 (Just 42)   -- 42&lt;/para&gt;
+ &lt;para&gt;withDefault 100 Nothing     -- 100&lt;/para&gt;
+ &lt;para&gt;withDefault &quot;unknown&quot; (Dict.get &quot;Tom&quot; Dict.empty)   -- &quot;unknown&quot;&lt;/para&gt;
+ **Note:** This can be overused! Many cases are better handled by a `case`
+ expression. And if you end up using `withDefault` a lot, it can be a good sign
+ that a [custom type][ct] will clean your code up quite a bit!
+ [ct]: https://guide.elm-lang.org/types/custom_types.html
+</summary>
+</member>
+<member name="T:Elm.Core.MaybePervasives.Maybe`1">
+<summary>
+ Represent values that may or may not exist. It can be useful if you have a
+ record field that is only filled in sometimes. Or if a function takes a value
+ sometimes, but does not absolutely need it.
+ &lt;para&gt;-- A person, but maybe we do not know their age.&lt;/para&gt;
+ &lt;para&gt;type Person =&lt;/para&gt;
+ &lt;para&gt;    { name : String&lt;/para&gt;
+ &lt;para&gt;    , age : Maybe Int&lt;/para&gt;
+ &lt;para&gt;    }&lt;/para&gt;
+ &lt;para&gt;let tom = { name = &quot;Tom&quot;, age = Just 42 }&lt;/para&gt;
+ &lt;para&gt;let sue = { name = &quot;Sue&quot;, age = Nothing }&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.Char.fromCode(System.Int32)">
+<summary>
+ Convert a Unicode [code point][cp] to a character.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.toLower(System.Char)">
+<summary>
+ Convert to lower case.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.toUpper(System.Char)">
+<summary>
+ Convert to upper case.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isHexDigit(System.Char)">
+<summary>
+ Detect hexadecimal digits `0123456789abcdefABCDEF`
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isOctDigit(System.Char)">
+<summary>
+ Detect octal digits `01234567`.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isAlphaNum(System.Char)">
+<summary>
+ Detect upper case and lower case ASCII characters.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isDigit(System.Char)">
+<summary>
+ Detect digits `0123456789`
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isAlpha(System.Char)">
+<summary>
+ Detect upper case and lower case ASCII characters.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isLower(System.Char)">
+<summary>
+ Detect lower case ASCII characters.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.isUpper(System.Char)">
+<summary>
+ Detect upper case ASCII characters.
+</summary>
+</member>
+<member name="M:Elm.Core.Char.toCode(System.Char)">
+<summary>
+ Convert to the corresponding Unicode [code point][cp].
+</summary>
+</member>
+<member name="M:Elm.Core.String.fromFloat(System.Double)">
+<summary>
+ Convert a `Float` to a `String`.
+ &lt;para&gt;String.fromFloat 123 == &quot;123&quot;&lt;/para&gt;
+ &lt;para&gt;String.fromFloat -42 == &quot;-42&quot;&lt;/para&gt;
+ &lt;para&gt;String.fromFloat 3.9 == &quot;3.9&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.toFloat(System.String)">
+<summary>
+ Try to convert a string into a float, failing on improperly formatted strings.
+ &lt;para&gt;String.toFloat &quot;123&quot; == Just 123.0&lt;/para&gt;
+ &lt;para&gt;String.toFloat &quot;-42&quot; == Just -42.0&lt;/para&gt;
+ &lt;para&gt;String.toFloat &quot;3.1&quot; == Just 3.1&lt;/para&gt;
+ &lt;para&gt;String.toFloat &quot;31a&quot; == Nothing&lt;/para&gt;
+ If you are extracting a number from some raw user input, you will typically
+ want to use [`Maybe.withDefault`](Maybe#withDefault) to handle bad data:
+ &lt;para&gt;Maybe.withDefault 0 (String.toFloat &quot;42.5&quot;) == 42.5&lt;/para&gt;
+ &lt;para&gt;Maybe.withDefault 0 (String.toFloat &quot;cats&quot;) == 0&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.fromInt(System.Int32)">
+<summary>
+  Convert an `Int` to a `String`.
+ &lt;para&gt;String.fromInt 123 == &quot;123&quot;&lt;/para&gt;
+ &lt;para&gt;String.fromInt -42 == &quot;-42&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.toInt(System.String)">
+<summary>
+ Try to convert a string into an int, failing on improperly formatted strings.
+ &lt;para&gt;String.toInt &quot;123&quot; == Just 123&lt;/para&gt;
+ &lt;para&gt;String.toInt &quot;-42&quot; == Just -42&lt;/para&gt;
+ &lt;para&gt;String.toInt &quot;3.1&quot; == Nothing&lt;/para&gt;
+ &lt;para&gt;String.toInt &quot;31a&quot; == Nothing&lt;/para&gt;
+ If you are extracting a number from some raw user input, you will typically
+ want to use [`Maybe.withDefault`](Maybe#withDefault) to handle bad data:
+ &lt;para&gt;Maybe.withDefault 0 (String.toInt &quot;42&quot;) == 42&lt;/para&gt;
+ &lt;para&gt;Maybe.withDefault 0 (String.toInt &quot;ab&quot;) == 0&lt;/para&gt;
+ &lt;para&gt;String.fromInt 123 == &quot;123&quot;&lt;/para&gt;
+ &lt;para&gt;String.fromInt -42 == &quot;-42&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.trimRight(System.String)">
+<summary>
+ Get rid of whitespace on the right of a string.
+ &lt;para&gt;trimRight &quot;  hats  \n&quot; == &quot;  hats&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.trimLeft(System.String)">
+<summary>
+ Get rid of whitespace on the left of a string.
+ &lt;para&gt;trimLeft &quot;  hats  \n&quot; == &quot;hats  \n&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.trim(System.String)">
+<summary>
+ Get rid of whitespace on both sides of a string.
+ &lt;para&gt;trim &quot;  hats  \n&quot; == &quot;hats&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.padRight(System.Int32,System.Char,System.String)">
+<summary>
+ Pad a string on the right until it has a given length.
+ &lt;para&gt;padRight 5 &apos;.&apos; &quot;1&quot;   == &quot;1....&quot;&lt;/para&gt;
+ &lt;para&gt;padRight 5 &apos;.&apos; &quot;11&quot;  == &quot;11...&quot;&lt;/para&gt;
+ &lt;para&gt;padRight 5 &apos;.&apos; &quot;121&quot; == &quot;121..&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.padLeft(System.Int32,System.Char,System.String)">
+<summary>
+ Pad a string on the left until it has a given length.
+ &lt;para&gt;padLeft 5 &apos;.&apos; &quot;1&quot;   == &quot;....1&quot;&lt;/para&gt;
+ &lt;para&gt;padLeft 5 &apos;.&apos; &quot;11&quot;  == &quot;...11&quot;&lt;/para&gt;
+ &lt;para&gt;padLeft 5 &apos;.&apos; &quot;121&quot; == &quot;..121&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.pad(System.Int32,System.Char,System.String)">
+<summary>
+ Pad a string on both sides until it has a given length.
+ &lt;para&gt;pad 5 &apos; &apos; &quot;1&quot;   == &quot;  1  &quot;&lt;/para&gt;
+ &lt;para&gt;pad 5 &apos; &apos; &quot;11&quot;  == &quot;  11 &quot;&lt;/para&gt;
+ &lt;para&gt;pad 5 &apos; &apos; &quot;121&quot; == &quot; 121 &quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.toLower(System.String)">
+<summary>
+ Convert a string to all lower case. Useful for case-insensitive comparisons.
+ &lt;para&gt;toLower &quot;X-FILES&quot; == &quot;x-files&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.toUpper(System.String)">
+<summary>
+ Convert a string to all upper case. Useful for case-insensitive comparisons
+ and VIRTUAL YELLING.
+ &lt;para&gt;toUpper &quot;skinner&quot; == &quot;SKINNER&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.indices">
+<summary>
+ Alias for `indexes`.
+</summary>
+</member>
+<member name="M:Elm.Core.String.indexes(System.String,System.String)">
+<summary>
+ Get all of the indexes for a substring in another string.
+ &lt;para&gt;indexes &quot;i&quot; &quot;Mississippi&quot;   == [1,4,7,10]&lt;/para&gt;
+ &lt;para&gt;indexes &quot;ss&quot; &quot;Mississippi&quot;  == [2,5]&lt;/para&gt;
+ &lt;para&gt;indexes &quot;needle&quot; &quot;haystack&quot; == []&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.contains(System.String,System.String)">
+<summary>
+ See if the second string contains the first one.
+ &lt;para&gt;contains &quot;the&quot; &quot;theory&quot; == True&lt;/para&gt;
+ &lt;para&gt;contains &quot;hat&quot; &quot;theory&quot; == False&lt;/para&gt;
+ &lt;para&gt;contains &quot;THE&quot; &quot;theory&quot; == False&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.endsWith(System.String,System.String)">
+<summary>
+ See if the second string ends with the first one.
+ &lt;para&gt;endsWith &quot;the&quot; &quot;theory&quot; == False&lt;/para&gt;
+ &lt;para&gt;endsWith &quot;ory&quot; &quot;theory&quot; == True&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.startsWith(System.String,System.String)">
+<summary>
+ See if the second string starts with the first one.
+ &lt;para&gt;startsWith &quot;the&quot; &quot;theory&quot; == True&lt;/para&gt;
+ &lt;para&gt;startsWith &quot;ory&quot; &quot;theory&quot; == False&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.dropRight(System.Int32,System.String)">
+<summary>
+ Drop *n* characters from the right side of a string.
+ &lt;para&gt;dropRight 2 &quot;Cigarette Smoking Man&quot; == &quot;Cigarette Smoking M&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.dropLeft(System.Int32,System.String)">
+<summary>
+ Drop *n* characters from the left side of a string.
+ &lt;para&gt;dropLeft 2 &quot;The Lone Gunmen&quot; == &quot;e Lone Gunmen&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.right(System.Int32,System.String)">
+<summary>
+ Take *n* characters from the right side of a string.
+ &lt;para&gt;right 2 &quot;Scully&quot; == &quot;ly&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.left(System.Int32,System.String)">
+<summary>
+ Take *n* characters from the left side of a string.
+ &lt;para&gt;left 2 &quot;Mulder&quot; == &quot;Mu&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.slice(System.Int32,System.Int32,System.String)">
+<summary>
+ Take a substring given a start and end index. Negative indexes
+ are taken starting from the *end* of the string.
+</summary>
+</member>
+<member name="M:Elm.Core.String.lines(System.String)">
+<summary>
+ Break a string into lines, splitting on newlines.
+ &lt;para&gt;lines &quot;How are you?\nGood?&quot; == [&quot;How are you?&quot;, &quot;Good?&quot;]&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.words(System.String)">
+<summary>
+ Break a string into words, splitting on chunks of whitespace.
+ &lt;para&gt;words &quot;How are \t you? \n Good?&quot; == [&quot;How&quot;,&quot;are&quot;,&quot;you?&quot;,&quot;Good?&quot;]&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.concat">
+<summary>
+ Concatenate many strings into one.
+ &lt;para&gt;concat [&quot;never&quot;,&quot;the&quot;,&quot;less&quot;] == &quot;nevertheless&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.append(System.String,System.String)">
+<summary>
+ Append two strings.
+ &lt;para&gt;append &quot;butter&quot; &quot;fly&quot; == &quot;butterfly&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.replace(System.String,System.String,System.String)">
+<summary>
+ Replace all occurrences of some substring.
+ &lt;para&gt;replace &quot;.&quot; &quot;-&quot; &quot;Json.Decode.succeed&quot; == &quot;Json-Decode-succeed&quot;&lt;/para&gt;
+ &lt;para&gt;replace &quot;,&quot; &quot;/&quot; &quot;a,b,c,d,e&quot;           == &quot;a/b/c/d/e&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.join(System.String,Microsoft.FSharp.Collections.FSharpList{System.String})">
+<summary>
+ Put many strings together with a given separator.
+ &lt;para&gt;join &quot;a&quot; [&quot;H&quot;,&quot;w&quot;,&quot;ii&quot;,&quot;n&quot;]        == &quot;Hawaiian&quot;&lt;/para&gt;
+ &lt;para&gt;join &quot; &quot; [&quot;cat&quot;,&quot;dog&quot;,&quot;cow&quot;]       == &quot;cat dog cow&quot;&lt;/para&gt;
+ &lt;para&gt;join &quot;/&quot; [&quot;home&quot;,&quot;evan&quot;,&quot;Desktop&quot;] == &quot;home/evan/Desktop&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.split(System.String,System.String)">
+<summary>
+ Split a string using a given separator.
+ &lt;para&gt;split &quot;,&quot; &quot;cat,dog,cow&quot;        == [&quot;cat&quot;,&quot;dog&quot;,&quot;cow&quot;]&lt;/para&gt;
+ &lt;para&gt;split &quot;/&quot; &quot;home/evan/Desktop/&quot; == [&quot;home&quot;,&quot;evan&quot;,&quot;Desktop&quot;, &quot;&quot;]&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.repeat">
+<summary>
+ Repeat a string *n* times.
+</summary>
+</member>
+<member name="M:Elm.Core.String.reverse(System.String)">
+<summary>
+ Reverse a string.
+ &lt;para&gt;reverse &quot;stressed&quot; == &quot;desserts&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.length">
+<summary>
+ Get the length of a string.
+ &lt;para&gt;length &quot;innumerable&quot; == 11&lt;/para&gt;
+ &lt;para&gt;length &quot;&quot; == 0&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.isEmpty(System.String)">
+<summary>
+ Determine if a string is empty.
+</summary>
+</member>
+<member name="P:Elm.Core.String.all">
+<summary>
+ Determine whether *all* characters pass the test.
+ &lt;para&gt;all isDigit &quot;90210&quot; == True&lt;/para&gt;
+ &lt;para&gt;all isDigit &quot;R2-D2&quot; == False&lt;/para&gt;
+ &lt;para&gt;all isDigit &quot;heart&quot; == False&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.any">
+<summary>
+ Determine whether *any* characters pass the test.
+ &lt;para&gt;any isDigit &quot;90210&quot; == True&lt;/para&gt;
+ &lt;para&gt;any isDigit &quot;R2-D2&quot; == True&lt;/para&gt;
+ &lt;para&gt;any isDigit &quot;heart&quot; == False&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.foldr``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0,System.String)">
+<summary>
+ Reduce a string from the right.
+ &lt;para&gt;foldr cons &quot;&quot; &quot;time&quot; == &quot;time&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.foldl``1(Microsoft.FSharp.Core.FSharpFunc{System.Char,Microsoft.FSharp.Core.FSharpFunc{``0,``0}},``0,System.String)">
+<summary>
+ Reduce a string from the left.
+ &lt;para&gt;foldl cons &quot;&quot; &quot;time&quot; == &quot;emit&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.filter">
+<summary>
+ Keep only the characters that pass the test.
+ &lt;para&gt;filter isDigit &quot;R2-D2&quot; == &quot;22&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="P:Elm.Core.String.map">
+<summary>
+ Transform every character in a string
+ &lt;para&gt;map (fun c -&gt; if c == &apos;/&apos; then &apos;.&apos; else c) &quot;a/b/c&quot; == &quot;a.b.c&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.fromList(Microsoft.FSharp.Collections.FSharpList{System.Char})">
+<summary>
+ Convert a list of characters into a String. Can be useful if you
+ want to create a string primarily by consing, perhaps for decoding
+ something.
+ &lt;para&gt;fromList [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;] == &quot;abc&quot;&lt;/para&gt;
+ &lt;para&gt;fromList [&apos;🙈&apos;,&apos;🙉&apos;,&apos;🙊&apos;] == &quot;🙈🙉🙊&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.toList(System.String)">
+<summary>
+Convert a string to a list of characters.
+ &lt;para&gt;toList &quot;abc&quot; == [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]&lt;/para&gt;
+ &lt;para&gt;toList &quot;🙈🙉🙊&quot; == [&apos;🙈&apos;,&apos;🙉&apos;,&apos;🙊&apos;]&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.fromChar(System.Char)">
+<summary>
+ Create a string from a given character.
+ &lt;para&gt;fromChar &apos;a&apos; == &quot;a&quot;&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.String.cons(System.Char,System.String)">
+<summary>
+ Add a character to the beginning of a string.
+ cons &apos;T&apos; &quot;he truth is out there&quot; == &quot;The truth is out there&quot;
+</summary>
+</member>
+<member name="M:Elm.Core.String.uncons(System.String)">
+<summary>
+ Split a non-empty string into its head and tail. This lets you
+ pattern match on strings exactly as you would with lists.
+ &lt;para&gt;uncons &quot;abc&quot; == Just (&apos;a&apos;,&quot;bc&quot;)&lt;/para&gt;
+ &lt;para&gt;uncons &quot;&quot;    == Nothing&lt;/para&gt;
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.mapBoth``4(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpFunc{``2,``3},``0,``2)">
+<summary>
+ Transform both parts of a tuple.
+ import String
+ mapBoth String.reverse sqrt  (&quot;stressed&quot;, 16) == (&quot;desserts&quot;, 4)
+ mapBoth String.length negate (&quot;stressed&quot;, 16) == (8, -16)
+
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.mapSecond``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``2,``0)">
+<summary>
+ Transform the second value in a tuple.
+ mapSecond sqrt   (&quot;stressed&quot;, 16) == (&quot;stressed&quot;, 4)
+ mapSecond negate (&quot;stressed&quot;, 16) == (&quot;stressed&quot;, -16)
+
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.mapFirst``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},``0,``2)">
+<summary>
+ Transform the first value in a tuple.
+ import String
+ mapFirst String.reverse (&quot;stressed&quot;, 16) == (&quot;desserts&quot;, 16)
+ mapFirst String.length  (&quot;stressed&quot;, 16) == (8, 16)
+
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.second``2(``0,``1)">
+<summary>
+ Extract the second value from a tuple.
+ second (3, 4) == 4
+ second (&quot;john&quot;, &quot;doe&quot;) == &quot;doe&quot;
+
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.first``2(``0,``1)">
+<summary>
+ Extract the first value from a tuple.
+ first (3, 4) == 3
+ first (&quot;john&quot;, &quot;doe&quot;) == &quot;john&quot;
+
+</summary>
+</member>
+<member name="M:Elm.Core.Tuple.pair``2(``0,``1)">
+<summary>
+ Create a 2-tuple.
+ -- pair 3 4 == (3, 4)
+ zip : List a -&gt; List b -&gt; List (a, b)
+ zip xs ys =
+   List.map2 Tuple.pair xs ys
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.slice``1(System.Int32,System.Int32,``0[])">
+<summary>
+ Get a sub-section of an array: `(slice start end array)`. The `start` is a
+ zero-based index where we will start our slice. The `end` is a zero-based index
+ that indicates the end of the slice. The slice extracts up to but not including
+ `end`.
+     slice  0  3 (fromList [0,1,2,3,4]) == fromList [0,1,2]
+     slice  1  4 (fromList [0,1,2,3,4]) == fromList [1,2,3]
+ Both the `start` and `end` indexes can be negative, indicating an offset from
+ the end of the array.
+     slice  1 -1 (fromList [0,1,2,3,4]) == fromList [1,2,3]
+     slice -2  5 (fromList [0,1,2,3,4]) == fromList [3,4]
+ This makes it pretty easy to `pop` the last element off of an array:
+ `slice 0 -1 array`
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.translateIndex``1(System.Int32,``0[])">
+<summary>
+ Given a relative array index, convert it into an absolute one.
+     translateIndex -1 someArray == someArray.length - 1
+     translateIndex -10 someArray == someArray.length - 10
+     translateIndex 5 someArray == 5
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.indexedMap``2">
+<summary>
+ Apply a function on every element with its index as first argument.
+     indexedMap (*) (fromList [5,5,5]) == fromList [0,5,10]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.foldl``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,``0[])">
+<summary>
+ Reduce an array from the left. Read `foldl` as fold from the left.
+    foldl (::) [] (fromList [1,2,3]) == [3,2,1]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.foldr``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``0[],``1)">
+<summary>
+ Reduce an array from the right. Read `foldr` as fold from the right.
+    foldr (+) 0 (repeat 3 5) == 15
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.toIndexedList``1(``0[])">
+<summary>
+ Create an indexed list from an array. Each element of the array will be
+ paired with its index.
+     toIndexedList (fromList [&quot;cat&quot;,&quot;dog&quot;]) == [(0,&quot;cat&quot;), (1,&quot;dog&quot;)]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.push``1(``0,``0[])">
+<summary>
+ Push an element onto the end of an array.
+     push 3 (fromList [1,2]) == fromList [1,2,3]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.set``1(System.Int32,``0,``0[])">
+<summary>
+ Set the element at a particular index. Returns an updated array.
+ If the index is out of range, the array is unaltered.
+     set 1 7 (fromList [1,2,3]) == fromList [1,7,3]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.get``1(System.Int32,``0[])">
+<summary>
+ Return `Just` the element at the index or `Nothing` if the index is out of
+ range.
+     get  0 (fromList [0,1,2]) == Just 0
+     get  2 (fromList [0,1,2]) == Just 2
+     get  5 (fromList [0,1,2]) == Nothing
+     get -1 (fromList [0,1,2]) == Nothing
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.fromList``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Create an array from a `List`.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.repeat``1(System.Int32,``0)">
+<summary>
+ Creates an array with a given length, filled with a default element.
+     repeat 5 0     == fromList [0,0,0,0,0]
+     repeat 3 &quot;cat&quot; == fromList [&quot;cat&quot;,&quot;cat&quot;,&quot;cat&quot;]
+ Notice that `repeat 3 x` is the same as `initialize 3 (always x)`.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Array.initialize``1(System.Int32,Microsoft.FSharp.Core.FSharpFunc{System.Int32,``0})">
+<summary>
+ Initialize an array. `initialize n f` creates an array of length `n` with
+ the element at index `i` initialized to the result of `(f i)`.
+     initialize 4 identity    == fromList [0,1,2,3]
+     initialize 4 (\n -&gt; n*n) == fromList [0,1,4,9]
+     initialize 4 (always 0)  == fromList [0,0,0,0]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.drop``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Drop the first *n* members of a list.
+
+     drop 2 [1,2,3,4] == [3,4]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.take``1(System.Int32,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Take the first *n* members of a list.
+
+     take 2 [1,2,3,4] == [1,2]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.tail``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Extract the rest of the list.
+
+     tail [1,2,3] == Just [2,3]
+     tail [] == Nothing
+
+ **Note:** It is usually preferable to use a `case` to deconstruct a `List`
+ because it gives you `(x :: xs)` and you can work with both subparts.
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.head``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Extract the first element of a list.
+
+     head [1,2,3] == Just 1
+     head [] == Nothing
+
+ **Note:** It is usually preferable to use a `case` to deconstruct a `List`
+ because it gives you `(x :: xs)` and you can work with both subparts.
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.sortWith``1(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``0,Elm.Core.Basics.Order}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Sort values with a custom comparison function.
+
+     sortWith flippedComparison [1,2,3,4,5] == [5,4,3,2,1]
+
+     flippedComparison a b =
+         case compare a b of
+           LT -&gt; GT
+           EQ -&gt; EQ
+           GT -&gt; LT
+
+ This is also the most general sort function, allowing you
+ to define any other: `sort == sortWith compare`
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.intersperse``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Places the given value between all members of the given list.
+     intersperse &quot;on&quot; [&quot;turtles&quot;,&quot;turtles&quot;,&quot;turtles&quot;] == [&quot;turtles&quot;,&quot;on&quot;,&quot;turtles&quot;,&quot;on&quot;,&quot;turtles&quot;]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.concatMap``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Collections.FSharpList{``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Map a given function onto a list and flatten the resulting lists.
+     concatMap f xs == concat (map f xs)
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.append``1(Microsoft.FSharp.Collections.FSharpList{``0},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Put two lists together.
+     append [1,1,2] [3,5,8] == [1,1,2,3,5,8]
+     append [&apos;a&apos;,&apos;b&apos;] [&apos;c&apos;] == [&apos;a&apos;,&apos;b&apos;,&apos;c&apos;]
+ You can also use [the `(++)` operator](Basics#++) to append lists.
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.product(Microsoft.FSharp.Collections.FSharpList{System.Int32})">
+<summary>
+ Get the product of the list elements.
+     product [2,2,2] == 8
+     product [3,3,3] == 27
+     product []      == 1
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.sum(Microsoft.FSharp.Collections.FSharpList{System.Int32})">
+<summary>
+ Get the sum of the list elements.
+     sum [1,2,3] == 6
+     sum [1,1,1] == 3
+     sum []      == 0
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.minimum``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Find the minimum element in a non-empty list.
+     minimum [3,2,1] == Just 1
+     minimum []      == Nothing
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.maximum``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Find the maximum element in a non-empty list.
+     maximum [1,4,2] == Just 4
+     maximum []      == Nothing
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.member'``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Figure out whether a list contains a value.
+     member 9 [1,2,3,4] == False
+     member 4 [1,2,3,4] == True
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.any``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Determine if any elements satisfy some test.
+     any isEven [2,3] == True
+     any isEven [1,3] == False
+     any isEven [] == False
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.all``1(Microsoft.FSharp.Core.FSharpFunc{``0,System.Boolean},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Determine if all elements satisfy some test.
+     all isEven [2,4] == True
+     all isEven [2,3] == False
+     all isEven [] == True
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.reverse``1(Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Reverse a list.
+     reverse [1,2,3,4] == [4,3,2,1]
+</summary>
+</member>
+<member name="M:Elm.Core.List.filterMap``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Filter out certain values. For example, maybe you have a bunch of strings
+ from an untrusted source and you want to turn them into numbers:
+
+     numbers : List Int
+     numbers =
+       filterMap String.toInt [&quot;3&quot;, &quot;hi&quot;, &quot;12&quot;, &quot;4th&quot;, &quot;May&quot;]
+     -- numbers == [3, 12]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.foldr``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Reduce a list from the right.
+     foldr (+)  0  [1,2,3] == 6
+     foldr (::) [] [1,2,3] == [1,2,3]
+ So `foldr step state [1,2,3]` is like saying:
+     state
+       |&gt; step 3
+       |&gt; step 2
+       |&gt; step 1
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.foldl``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``1}},``1,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Reduce a list from the left.
+     foldl (+)  0  [1,2,3] == 6
+     foldl (::) [] [1,2,3] == [3,2,1]
+ So `foldl step state [1,2,3]` is like saying:
+     state
+       |&gt; step 1
+       |&gt; step 2
+       |&gt; step 3
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.indexedMap``2(Microsoft.FSharp.Core.FSharpFunc{System.Int32,Microsoft.FSharp.Core.FSharpFunc{``0,``1}},Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Same as `map` but the function is also applied to the index of each
+ element (starting at zero).
+     indexedMap Tuple.pair [&quot;Tom&quot;,&quot;Sue&quot;,&quot;Bob&quot;] == [ (0,&quot;Tom&quot;), (1,&quot;Sue&quot;), (2,&quot;Bob&quot;) ]
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.cons``1(``0,Microsoft.FSharp.Collections.FSharpList{``0})">
+<summary>
+ Add an element to the front of a list.
+     1 :: [2,3] == [1,2,3]
+     1 :: [] == [1]
+ This operator is pronounced *cons* for historical reasons, but you can think
+ of it like pushing an entry onto a stack.
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.range(System.Int32,System.Int32)">
+<summary>
+ Create a list of numbers, every element increasing by one.
+ You give the lowest and highest number that should be in the list.
+     range 3 6 == [3, 4, 5, 6]
+     range 3 3 == [3]
+     range 6 3 == []
+
+</summary>
+</member>
+<member name="M:Elm.Core.List.repeat``1(System.Int32,``0)">
+<summary>
+ Create a list with *n* copies of a value:
+ repeat 3 (0,0) == [(0,0),(0,0),(0,0)]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.fromMaybe``2(``0,Microsoft.FSharp.Core.FSharpOption{``1})">
+<summary>
+ Convert from a simple `Maybe` to interact with some code that primarily
+ uses `Results`.
+
+     parseInt : String -&gt; Maybe Int
+
+     resultParseInt : String -&gt; Result String Int
+     resultParseInt string =
+         fromMaybe (&quot;error parsing string: &quot; ++ toString string) (parseInt string)
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.toMaybe``2(Microsoft.FSharp.Core.FSharpResult{``0,``1})">
+<summary>
+ Convert to a simpler `Maybe` if the actual error message is not needed or
+ you need to interact with some code that primarily uses maybes.
+
+     parseInt : String -&gt; Result ParseError Int
+
+     maybeParseInt : String -&gt; Maybe Int
+     maybeParseInt string =
+         toMaybe (parseInt string)
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.mapError``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpResult{``2,``0})">
+<summary>
+ Transform an `Error` value. For example, say the errors we get have too much
+ information:
+
+     parseInt : String -&gt; Result ParseError Int
+
+     type alias ParseError =
+         { message : String
+         , code : Int
+         , position : (Int,Int)
+         }
+
+     mapError .message (parseInt &quot;123&quot;) == Ok 123
+     mapError .message (parseInt &quot;abc&quot;) == Error &quot;char &apos;a&apos; is not a number&quot;
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.andThen``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpResult{``1,``2}},Microsoft.FSharp.Core.FSharpResult{``0,``2})">
+<summary>
+ Chain together a sequence of computations that may fail. It is helpful
+ to see its definition:
+
+     andThen : (a -&gt; Result e b) -&gt; Result e a -&gt; Result e b
+     andThen callback result =
+         case result of
+           Ok value -&gt; callback value
+           Error msg -&gt; Error msg
+
+ This means we only continue with the callback if things are going well. For
+ example, say you need to use (`toInt : String -&gt; Result String Int`) to parse
+ a month and make sure it is between 1 and 12:
+
+     toValidMonth : Int -&gt; Result String Int
+     toValidMonth month =
+         if month &gt;= 1 &amp;&amp; month &lt;= 12
+             then Ok month
+             else Error &quot;months must be between 1 and 12&quot;
+
+     toMonth : String -&gt; Result String Int
+     toMonth rawString =
+         toInt rawString
+           |&gt; andThen toValidMonth
+
+     -- toMonth &quot;4&quot; == Ok 4
+     -- toMonth &quot;9&quot; == Ok 9
+     -- toMonth &quot;a&quot; == Error &quot;cannot parse to an Int&quot;
+     -- toMonth &quot;0&quot; == Error &quot;months must be between 1 and 12&quot;
+
+ This allows us to come out of a chain of operations with quite a specific error
+ message. It is often best to create a custom type that explicitly represents
+ the exact ways your computation may fail. This way it is easy to handle in your
+ code.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.map2``4(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}},Microsoft.FSharp.Core.FSharpResult{``0,``3},Microsoft.FSharp.Core.FSharpResult{``1,``3})">
+<summary>
+ Apply a function if both results are `Ok`. If not, the first `Error` will
+ propagate through.
+
+     map2 max (Ok 42)   (Ok 13)   == Ok 42
+     map2 max (Error &quot;x&quot;) (Ok 13)   == Error &quot;x&quot;
+     map2 max (Ok 42)   (Error &quot;y&quot;) == Error &quot;y&quot;
+     map2 max (Error &quot;x&quot;) (Error &quot;y&quot;) == Error &quot;x&quot;
+
+ This can be useful if you have two computations that may fail, and you want
+ to put them together quickly.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.map``3(Microsoft.FSharp.Core.FSharpFunc{``0,``1},Microsoft.FSharp.Core.FSharpResult{``0,``2})">
+<summary>
+ Apply a function to a result. If the result is `Ok`, it will be converted.
+ If the result is an `Error`, the same error value will propagate through.
+     map sqrt (Ok 4.0)          == Ok 2.0
+     map sqrt (Error &quot;bad input&quot;) == Error &quot;bad input&quot;
+
+</summary>
+</member>
+<member name="M:Elm.Core.Result.withDefault``2(``0,Microsoft.FSharp.Core.FSharpResult{``0,``1})">
+<summary>
+ If the result is `Ok` return the value, but if the result is an `Error` then
+ return a given default value. The following examples try to parse integers.
+     Result.withDefault 0 (Ok 123)   == 123
+     Result.withDefault 0 (Error &quot;no&quot;) == 0
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.merge``4(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``2}}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``3,Microsoft.FSharp.Core.FSharpFunc{``2,``2}}}},Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``3,Microsoft.FSharp.Core.FSharpFunc{``2,``2}}},Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Collections.FSharpMap{``0,``3},``2)">
+<summary>
+ The most general way of combining two dictionaries. You provide three
+ accumulators for when a given key appears:
+
+   1. Only in the left dictionary.
+   2. In both dictionaries.
+   3. Only in the right dictionary.
+
+ You then traverse all the keys from lowest to highest, building up whatever
+ you want.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.diff``3(Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Collections.FSharpMap{``0,``2})">
+<summary>
+ Keep a key-value pair when its key does not appear in the second dictionary.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.intersect``3(Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Collections.FSharpMap{``0,``2})">
+<summary>
+ Keep a key-value pair when its key appears in the second dictionary.
+ Preference is given to values in the first dictionary.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.union``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1},Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Combine two dictionaries. If there is a collision, preference is given
+ to the first dictionary.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.fromList``2">
+<summary>
+ Convert an association list into a dictionary. -}
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.toList``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Convert a dictionary into an association list of key-value pairs, sorted by keys.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.values``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Get all of the values in a dictionary, in the order of their keys.
+
+ values (fromList [(0,&quot;Alice&quot;),(1,&quot;Bob&quot;)]) == [&quot;Alice&quot;, &quot;Bob&quot;]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.keys``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Get all of the keys in a dictionary, sorted from lowest to highest.
+
+ keys (fromList [(0,&quot;Alice&quot;),(1,&quot;Bob&quot;)]) == [0,1]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.partition``2(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,System.Boolean}},Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Partition a dictionary according to some test. The first dictionary
+ contains all key-value pairs which passed the test, and the second contains
+ the pairs that did not.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.filter``2">
+<summary>
+ Keep only the key-value pairs that pass the given test.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.foldr``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``2}}},``2,Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Fold over the key-value pairs in a dictionary from highest key to lowest key.
+
+ getAges : Dict String User -&gt; List String
+ getAges users =
+   Dict.foldr addAge [] users
+
+ addAge : String -&gt; User -&gt; List String -&gt; List String
+ addAge _ user ages =
+   user.age :: ages
+
+ -- getAges users == [28,19,33]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.foldl``3(Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``2}}},``2,Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Fold over the key-value pairs in a dictionary from lowest key to highest key.
+
+ getAges : Dict String User -&gt; List String
+ getAges users =
+   Dict.foldl addAge [] users
+
+ addAge : String -&gt; User -&gt; List String -&gt; List String
+ addAge _ user ages =
+   user.age :: ages
+
+ -- getAges users == [33,19,28]
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.map``3">
+<summary>
+ Apply a function to all values in a dictionary.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.singleton``2(``0,``1)">
+<summary>
+ Create a dictionary with one key-value pair. -}
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.update``2(``0,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.FSharpOption{``1},Microsoft.FSharp.Core.FSharpOption{``1}},Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Update the value of a dictionary for a specific key with a given function. -}
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.remove``2">
+<summary>
+ Remove a key-value pair from a dictionary. If the key is not found,
+ no changes are made.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.isEmpty``2">
+<summary>
+ Determine if a dictionary is empty.
+
+ isEmpty empty == True
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.insert``2(``0,``1,Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Insert a key-value pair into a dictionary. Replaces value when there is
+ a collision.
+
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.size``2(Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Determine the number of key-value pairs in the dictionary.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.member'``2(``0,Microsoft.FSharp.Collections.FSharpMap{``0,``1})">
+<summary>
+ Determine if a key is in a dictionary.
+</summary>
+</member>
+<member name="M:Elm.Core.Dict.get``2">
+<summary>
+ Get the value associated with a key. If the key is not found, return
+ `Nothing`. This is useful when you are not sure if a key will be in the
+ dictionary.
+
+    animals = fromList [ (&quot;Tom&quot;, Cat), (&quot;Jerry&quot;, Mouse) ]
+    get &quot;Tom&quot;   animals == Just Cat
+    get &quot;Jerry&quot; animals == Just Mouse
+    get &quot;Spike&quot; animals == Nothing
+
+</summary>
+</member>
+</members>
+</doc>
