@@ -16,6 +16,8 @@
     <RepositoryUrl>https://github.com/mimirproj</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
+    <PackageLicenseExpression>BSD-3-Clause</PackageLicenseExpression>
+
     <!-- FS0025: Incomplete pattern matches on this expression. -->
     <WarningsAsErrors>25</WarningsAsErrors>
   </PropertyGroup>
