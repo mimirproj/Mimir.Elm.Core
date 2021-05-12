@@ -7,6 +7,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
 
+    <Version>1.0.0</Version>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageTags>Mimir Elm</PackageTags>
+    <Description>A port of useful Elm.Core features to F#.</Description>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryUrl>https://github.com/mimirproj</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
     <!-- FS0025: Incomplete pattern matches on this expression. -->
     <WarningsAsErrors>25</WarningsAsErrors>
   </PropertyGroup>

@@ -1,0 +1,33 @@
+version: '1.0.{build}'
+image: Visual Studio 2019
+branches:
+  only:
+  - master
+init:
+  # Best practice (Windows line endings different to Unix/Linux)
+  - cmd: git config --global core.autocrlf true
+
+#install:
+
+before_build:
+  # Display .NET Core version
+  - cmd: dotnet --version
+
+  # Display minimal restore text
+  - cmd: dotnet restore ./src/Mimir.Elm.Core.fsproj --verbosity m
+  - cmd: dotnet restore ./test/Mimir.Elm.Core.Test.fsproj --verbosity m
+
+build_script:
+  - cmd: dotnet build Mimir.Elm.Core.sln
+  - cmd: dotnet pack ./src/Mimir.Elm.Core.fsproj -c Release /p:PackageVersion=1.0.{build}
+
+artifacts:
+  - path: ./src/bin/Release/*.nupkg
+
+#after_build:
+  # For once the build has completed
+
+#on_finish :
+  # any cleanup in here
+
+deploy: off
